@@ -1,0 +1,112 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* Universal CSS for Blog Application */
+
+body {
+    padding-top: 60px;
+    padding-left: 10px;
+    background-color: transparent;
+}
+
+section {
+    overflow: auto;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+.center {
+    text-align: center;
+}
+
+.center h1 {
+    margin-bottom: 10px;
+}
+
+//header redef//
+.nav {
+    margin: 0 auto;
+    padding: 2px;
+    width: 75%;
+    color: purple;
+}
+//header fix left side//
+.mytext {
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-top: 10px;
+    padding-right: 2px;
+    color: rgb(155, 0, 211);
+    font-size: 16px;
+}
+
+//ul fixes//
+ul li a {
+    color:#9932CC;
+    display:block;
+    text-decoration:none;
+    padding:1px;
+    }
+ul {
+    list-style-type:none;
+    }
+li {
+    display:block;
+    }
+ul li a:hover {
+    color:#A9A9A9;
+    display:block;
+    text-decoration:none;
+    }
+li:hover {
+    background:rgba(0, 200, 0, 0.8);
+    }
+.active a {
+    color:#9932CC;
+    text-decoration:none;
+    }
+li a {
+    color:#ba55d3;
+    padding:5px;
+    display:block;
+    }
+li a:hover {
+    color:#fdf5e6;
+    background:#333;
+    text-decoration:none;
+}
+/*New stuff for footer links */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #120012;
+  width: 450px;
+  a {
+    color: #330033;
+    &:hover {
+        background:rgba(0, 200, 0, 0.8);
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+
+/*New stuff for image*/
+img {
+    float: left;
+    margin: 0 10px 10px 10px;
+}
