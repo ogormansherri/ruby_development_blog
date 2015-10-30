@@ -1,0 +1,16 @@
+<% provide(:title, "Editing Room") %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= full_title(yield(:title)) %></title>      
+    </head>
+    
+    <body>
+        <h1> Edit Room</h1>
+        
+        <%= render 'form' %>
+        
+        <%= link_to 'Back', articles_path %>
+
+</body>
+</html>

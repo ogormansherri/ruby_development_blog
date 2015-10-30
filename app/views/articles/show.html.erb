@@ -1,0 +1,30 @@
+<% provide(:title, "comments") %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= full_title(yield(:title)) %></title>
+    </head>
+    
+    <body>
+
+    <p>
+    <strong>Title:</strong>
+    <%= @article.title %>
+</p>
+
+<p>
+    <strong>Text:</strong>
+    <%= @article.text %>
+</p>
+
+<h2>Comments</h2>
+    <%= render @article.comments %>
+
+<h2>Add your comment:</h2>
+    <%= render 'comments/form' %>
+    
+
+<%= link_to 'Edit', edit_article_path(@article) %>
+<%= link_to 'Back', articles_path %>
+</body>
+</html>
