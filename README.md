@@ -1,8 +1,9 @@
 # ruby_development_blog
 Ruby development platform
 
-### Author: Sherri Gunder-Verdugo
+### Programmer: Sherri Gunder-Verdugo
 
+**Ruby tutorial was used to help develop this project. It is an ongoing process.
 # Ruby Blog, Forum and Store User Deployed Website
 
 ## Developed on cloud 9.
