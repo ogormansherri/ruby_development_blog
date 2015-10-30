@@ -1,5 +1,20 @@
 Rails.application.routes.draw do
+  get 'users/new'
+
+  root 'static_pages#home'
+  # You can have the root of your site routed with "root"
+
   get 'welcome/index'
+
+  get 'home' => 'static_pages#home'
+
+  get 'help' =>'static_pages#help'
+
+  get 'about' => 'static_pages#about'
+  
+  get 'contact' => 'static_pages#contact'
+  
+  get 'signup' => 'users#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -9,8 +24,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   
-  # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

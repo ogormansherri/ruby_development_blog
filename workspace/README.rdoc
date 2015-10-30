@@ -3,7 +3,22 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+** Important: run this this through the terminal
+
+rails server -b $IP -p $PORT
+
+* Development Status:
+
+Use bundle install --without production to use sqlite than postgreSQL
+Use bundle update (skips production gems because of above statement)
+
+--Use the following in terminal:
+heroku create 
+Application site: https://damp-fortress-7128.herokuapp.com/
+Git heroku site: https://git.heroku.com/damp-fortress-7128.git
+
+* Testing
+
 
 * Ruby version
 

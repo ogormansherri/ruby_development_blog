@@ -1,23 +1,28 @@
+<% provide(:title, "Application") %>
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Zen Blog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <title><%= full_title(yield(:title)) %></title>
+        <%= stylesheet_link_tag 'application', media: 'all',
+                                           'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
 </head>
 <body>
   <nav class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
         <nav>
           <ul class="nav navbar-nav navbar-right">
-            <li><div class="mytext">Zen</div></li>
-            <li><%= link_to "Blog", root_path %></li>
+            <li><div class="mytext"><%= link_to "Zen Blog", root_path %></div></li>
+            <li><%= link_to "News", '#' %> </li>
             <li><%= link_to "Log In", '#' %></li>
             <li><%= link_to "Sign Up Now", '#' %></li>
-            <li><%= link_to 'New article', new_article_path %></li>
-            <li><%= link_to 'Articles', articles_path %></li>
-            <li><%= link_to "Help", '#' %></li>
+            <li><%= link_to "New article", new_article_path %></li>
+            <li><%= link_to "Articles", articles_path %></li>
+            <li><%= link_to "Help", help_path %></li>
+            <li><%= link_to "About", about_path %></li>
+            <li><%= link_to "Contact", contact_path %></li>
           </ul>
         </nav>
     </div>
