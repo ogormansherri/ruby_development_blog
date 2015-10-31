@@ -17,5 +17,5 @@ Section 4.4.2 on https://www.railstutorial.org/book/rails_flavored_ruby
 # To create a new user
 
 ```
-2.2.1 :003 > User.create(name: "Sherri Gunder", email: "sverdugo@me.com", password: "jasmine1124", password_confirmation: "jasmine1124")
+2.2.1 :003 > User.create(name: "Sherri Gunder", email: "sverdugo@me.com", password: "password", password_confirmation: "password")
 ```
