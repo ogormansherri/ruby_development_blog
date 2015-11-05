@@ -24,6 +24,9 @@ Rails.application.routes.draw do
     resources :comments
   end
   
+  # adds in users
+  resources :users      
+  
   
 
   # Example of regular route:

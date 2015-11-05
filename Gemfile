@@ -35,6 +35,7 @@ gem 'autoprefixer-rails'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+gem "bcrypt-ruby", :require => "bcrypt"
 
 #Required gems automatically install dependencies
 gem 'faker', '~> 1.4.2'
@@ -47,6 +48,9 @@ gem 'bootstrap-will_paginate', :git => 'git://github.com/yrgoldteeth/bootstrap-w
 
 ##fix for runtime error
 gem 'therubyracer'
+
+##for gravatar
+gem 'gravatar_image_tag', '1.0.0.pre2'
 
 
 ###End New
