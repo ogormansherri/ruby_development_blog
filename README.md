@@ -1,21 +1,24 @@
-# ruby_development_blog
-Ruby development platform
 
-### Programmer: Sherri Gunder-Verdugo
+     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
+    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
+    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
+    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
+     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
+    ----------------------------------------------------------------- 
 
-**Ruby tutorial was used to help develop this project. It is an ongoing process.
-# Ruby Blog, Forum and Store User Deployed Website
 
-## Developed on cloud 9.
+Welcome to your Rails project on Cloud9 IDE!
 
-https://c9.io/
+To get started, just do the following:
 
-# Palindrome Finder
+1. Run the project with the "Run Project" button in the menu bar on top of the IDE.
+2. Preview your new app by clicking on the URL that appears in the Run panel below (https://blog-verdu103.c9.io/).
 
-Section 4.4.2 on https://www.railstutorial.org/book/rails_flavored_ruby
+Happy coding!
+The Cloud9 IDE team
 
-# To create a new user
 
-```
-2.2.1 :003 > User.create(name: "Sherri Gunder", email: "sverdugo@me.com", password: "password", password_confirmation: "password")
-```
+## Support & Documentation
+
+Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
+To watch some training videos, visit http://www.youtube.com/user/c9ide

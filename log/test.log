@@ -1,0 +1,233 @@
+  [1m[36m (11.6ms)[0m  [1mCREATE TABLE "articles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "text" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (7.7ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "commenter" varchar, "body" text, "article_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (8.9ms)[0m  CREATE  INDEX "index_comments_on_article_id" ON "comments" ("article_id")
+  [1m[36m (11.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (70.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151024184335')
+  [1m[36m (11.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151024083540')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "articles"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "articles" ("title", "text", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-27 20:41:42', '2015-10-27 20:41:42', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-27 20:41:42', '2015-10-27 20:41:42', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-27 20:41:42', '2015-10-27 20:41:42', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-27 20:41:42', '2015-10-27 20:41:42', 298486374)
+  [1m[36m (8.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+Filter chain halted as #<Proc:0x00000006ecc6a0@/usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_controller/metal/http_authentication.rb:69> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+Filter chain halted as #<Proc:0x00000006ecc6a0@/usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_controller/metal/http_authentication.rb:69> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (4543.8ms)
+Completed 500 Internal Server Error in 4564ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "articles"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "articles" ("title", "text", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-27 20:47:46', '2015-10-27 20:47:46', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-27 20:47:46', '2015-10-27 20:47:46', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-27 20:47:46', '2015-10-27 20:47:46', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-27 20:47:46', '2015-10-27 20:47:46', 298486374)
+  [1m[36m (8.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_index
+------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+Filter chain halted as #<Proc:0x000000062b2bd0@/usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_controller/metal/http_authentication.rb:69> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2369.8ms)
+Completed 500 Internal Server Error in 2388ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "articles"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "articles" ("title", "text", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-27 20:48:24', '2015-10-27 20:48:24', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-27 20:48:24', '2015-10-27 20:48:24', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-27 20:48:24', '2015-10-27 20:48:24', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-27 20:48:24', '2015-10-27 20:48:24', 298486374)
+  [1m[36m (10.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2722.5ms)
+Completed 500 Internal Server Error in 2741ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+Filter chain halted as #<Proc:0x00000006595050@/usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_controller/metal/http_authentication.rb:69> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+Filter chain halted as #<Proc:0x00000006595050@/usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_controller/metal/http_authentication.rb:69> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "articles"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "articles" ("title", "text", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-27 20:50:56', '2015-10-27 20:50:56', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-27 20:50:56', '2015-10-27 20:50:56', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-27 20:50:56', '2015-10-27 20:50:56', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-27 20:50:56', '2015-10-27 20:50:56', 298486374)
+  [1m[36m (10.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+Filter chain halted as #<Proc:0x0000000715f688@/usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_controller/metal/http_authentication.rb:69> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+Filter chain halted as #<Proc:0x0000000715f688@/usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_controller/metal/http_authentication.rb:69> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2595.6ms)
+Completed 500 Internal Server Error in 2614ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "articles"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "articles" ("title", "text", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-27 22:04:05', '2015-10-27 22:04:05', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-27 22:04:05', '2015-10-27 22:04:05', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-27 22:04:05', '2015-10-27 22:04:05', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-27 22:04:05', '2015-10-27 22:04:05', 298486374)
+  [1m[36m (6.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+Filter chain halted as #<Proc:0x00000006295f30@/usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_controller/metal/http_authentication.rb:69> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+Filter chain halted as #<Proc:0x00000006295f30@/usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_controller/metal/http_authentication.rb:69> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Processing by WelcomeController#index as HTML
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "articles"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "articles" ("title", "text", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-27 22:04:35', '2015-10-27 22:04:35', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-27 22:04:35', '2015-10-27 22:04:35', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-27 22:04:35', '2015-10-27 22:04:35', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-27 22:04:35', '2015-10-27 22:04:35', 298486374)
+  [1m[36m (8.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Processing by WelcomeController#index as HTML
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "articles"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "articles" ("title", "text", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-28 14:54:17', '2015-10-28 14:54:17', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2015-10-28 14:54:17', '2015-10-28 14:54:17', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "comments"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-28 14:54:17', '2015-10-28 14:54:17', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "comments" ("commenter", "body", "article_id", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', NULL, '2015-10-28 14:54:17', '2015-10-28 14:54:17', 298486374)
+  [1m[36m (15.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Processing by StaticPagesController#help as HTML
+Filter chain halted as #<Proc:0x000000068a71a8@/usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_controller/metal/http_authentication.rb:69> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Processing by StaticPagesController#home as HTML
+Filter chain halted as #<Proc:0x000000068a71a8@/usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_controller/metal/http_authentication.rb:69> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Processing by StaticPagesController#about as HTML
+Filter chain halted as #<Proc:0x000000068a71a8@/usr/local/rvm/gems/ruby-2.2.1/gems/actionpack-4.2.4/lib/action_controller/metal/http_authentication.rb:69> rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (8293.7ms)
+Completed 200 OK in 8316ms (Views: 8315.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (3.0ms)[0m  [1mrollback transaction[0m
