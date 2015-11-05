@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zen Blog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><div class="mytext">Zen</div></li>
+            <li><%= link_to "Blog", root_path %></li>
+            <li><%= link_to "Log In", '#' %></li>
+            <li><%= link_to "Sign Up Now", '#' %></li>
+            <li><%= link_to 'New article', new_article_path %></li>
+            <li><%= link_to 'Articles', articles_path %></li>
+            <li><%= link_to "Help", '#' %></li>
+          </ul>
+        </nav>
+    </div>
+  </nav>
+
+<!--blog logo and corrections here -->
+<%= link_to image_tag("personalblog1.png", :width => 150, :height => 150, :alt => "Blog logo", :crop => :fill, :style => "border: 2px solid purple") %>
+
+
+<%= yield %>
+
+    <footer>
+        <div class="bloglinks">
+        <p>Design by <a href="http://www.gx2research.com/" target="_blank">geek girl</a> gx2research &copy;2015</p>
+        </div>
+    </footer>
+</body>
+</html>

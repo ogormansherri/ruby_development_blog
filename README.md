@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
      ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
     '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
@@ -22,3 +23,19 @@ The Cloud9 IDE team
 
 Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE. 
 To watch some training videos, visit http://www.youtube.com/user/c9ide
+=======
+# ruby_development_blog
+Ruby development platform
+
+### Author: Sherri Gunder-Verdugo
+
+# Ruby Blog, Forum and Store User Deployed Website
+
+## Developed on cloud 9.
+
+https://c9.io/
+
+# Palindrome Finder
+
+Section 4.4.2 on https://www.railstutorial.org/book/rails_flavored_ruby
+>>>>>>> 6020cb80c6e6ae5e7014c572ddf25799f70a36d4

@@ -5,6 +5,8 @@ application up and running.
 
 ** Important: run this this through the terminal
 
+git push --force 
+
 rails server -b $IP -p $PORT
 
 * Development Status:
